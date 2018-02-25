@@ -54,6 +54,7 @@
 #win10html .mainscreen .taskbar .windows{
     float: left;
     display: inline-block;
+    position: static;
     height: 40px;
     width: 50px;
     left: 0px;
@@ -70,7 +71,6 @@
     position: static;
     background-color: #000;
     overflow: hidden;
-    margin-left: 50px;
 }
 #win10html .mainscreen .taskbar .rightpanel{
     float: right;

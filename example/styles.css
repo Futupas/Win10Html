@@ -133,3 +133,50 @@
     background: #000000 url('./media/expand.png') no-repeat center;
     background-size: 15px 15px;
 }
+
+#win10html .mainscreen .taskbar .programs .prog{
+    height: 40px;
+    position: static;
+    display: inline-block;
+    width: 40px;
+    background-color: #000;
+    float: left;
+}
+#win10html .mainscreen .taskbar .programs .prog.opened{
+    width: 200px;
+}
+#win10html .mainscreen .taskbar .programs .prog:hover{
+    background-color: #222222;
+}
+#win10html .mainscreen .taskbar .programs .prog > .icon{
+    /* position: static; */
+    float: left;
+    height: 40px;
+    width: 40px;
+    /* background-color: #000000; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px 18px;
+}
+#win10html .mainscreen .taskbar .programs .prog:hover > .icon{
+    /* position: static; */
+    float: left;
+    height: 40px;
+    width: 40px;
+    background-size: 20px 20px;
+}
+#win10html .mainscreen .taskbar .programs .prog > .title{
+    /* position: static; */
+    display: none;
+    float: left;
+    height: 40px;
+    width: 160px;
+    margin-left: 40px;
+    line-height: 40px;
+    text-align: left;
+    color: #fff;
+    font-size: 13px;
+}
+#win10html .mainscreen .taskbar .programs .prog.opened > .title{
+    display: inline-block;
+}

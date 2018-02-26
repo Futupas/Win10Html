@@ -9,6 +9,8 @@ var Win10Html = {
         var taskbar = AddElement(mainscreen, 'div', ['taskbar'], '');
 
         var windows = AddElement(taskbar, 'div', ['windows'], '');
+        var taskview = AddElement(taskbar, 'div', ['taskview'], '');
+        var search = AddElement(taskbar, 'div', ['search'], '');
         var rightpanel = AddElement(taskbar, 'div', ['rightpanel'], '');
         var programs = AddElement(taskbar, 'div', ['programs'], '');
 
@@ -26,10 +28,17 @@ var Win10Html = {
             datetime.innerHTML = datestr;
         }, 1000);
         var language = AddElement(rightpanel, 'div', ['language'], '');
+        language.innerText = 'УКР';
         var volume = AddElement(rightpanel, 'div', ['volume'], '');
         var wifi = AddElement(rightpanel, 'div', ['wifi'], '');
         var battery = AddElement(rightpanel, 'div', ['battery'], '');
+        var expand = AddElement(rightpanel, 'div', ['author'], '');
         var expand = AddElement(rightpanel, 'div', ['expand'], '');
+
+
+        for (var i = 0; i < configuration.programs.length; i++){
+            //
+        }
     }
 }
 

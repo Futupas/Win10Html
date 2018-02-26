@@ -9,8 +9,8 @@ var Win10Html = {
         var taskbar = AddElement(mainscreen, 'div', ['taskbar'], '');
 
         var windows = AddElement(taskbar, 'div', ['windows'], '');
-        var taskview = AddElement(taskbar, 'div', ['taskview'], '');
         var search = AddElement(taskbar, 'div', ['search'], '');
+        var taskview = AddElement(taskbar, 'div', ['taskview'], '');
         var rightpanel = AddElement(taskbar, 'div', ['rightpanel'], '');
         var programs = AddElement(taskbar, 'div', ['programs'], '');
 
@@ -37,7 +37,33 @@ var Win10Html = {
 
 
         for (var i = 0; i < configuration.programs.length; i++){
-            //
+            var prog = AddElement(programs, 'div', ['prog', 'opened']);
+            prog.win10html_programData = configuration.programs[i];
+            var icon = AddElement(prog, 'div', ['icon']);
+            icon.style.backgroundImage = 'url("'+configuration.programs[i].icon+'")';
+            AddElement(prog, 'div', ['title']).innerText = configuration.programs[i].name;
+
+            prog.onclick = function () {
+                var window = AddElement(desktop, 'div', ['window', 'opened']);
+                var header = AddElement(window, 'div', ['header']);
+                AddElement(header, 'div', ['icon']).style.backgroundImage = 'url("'+this.win10html_programData.icon+'")';
+                AddElement(header, 'div', ['name']).innerText = this.win10html_programData.name;
+                var rightbuttons = AddElement(header, 'div', ['rightbuttons']);
+                AddElement(rightbuttons, 'div', ['minimize']);
+                var close = AddElement(rightbuttons, 'div', ['close']);
+                close.onclick = function(){
+                    console.dir(this.parentElement.parentElement.parentElement);
+                    this.parentElement.parentElement.parentElement.remove();
+                };
+
+                var content = AddElement(window, 'div', ['content']);
+                var inner = AddElement(content, 'iframe');
+                inner.src = this.win10html_programData.prog;
+                inner.style.position = 'absolute';
+                inner.style.border = '0px';
+                inner.style.top = inner.style.left = inner.style.bottom = inner.style.right = '0px';
+                inner.style.width = inner.style.height = '100%';
+            }
         }
     }
 }

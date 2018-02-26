@@ -50,7 +50,40 @@
 
     <script src="app.js"></script>
     <script>
-        Win10Html.Create();
+        var configuration = {
+            desktop: {
+                wallpapers: './media/wallpapers.png'
+            },
+            programs: [{
+                id: 0,
+                name: '',
+                prog: '',
+                icon: ''
+            },{
+                id: 1,
+                name: '',
+                prog: '',
+                icon: ''
+            },{
+                id: 2,
+                name: '',
+                prog: '',
+                icon: ''
+            },{
+                id: 3,
+                name: '',
+                prog: '',
+                icon: ''
+            },{
+                id: 4,
+                name: '',
+                prog: '',
+                icon: ''
+            }],
+            taskbar: [],
+            startmenu: []
+        };
+        Win10Html.Create(configuration);
     </script>
 </body>
 </html>

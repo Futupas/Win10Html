@@ -1,13 +1,11 @@
 var Win10Html = {
-    Create: function () {
-        // var win10html = document.createElement('div');
-        // win10html.id = "win10html";
-        // document.body.appendChild(win10hhtml);
+    Create: function (configuration) {
         var win10html = AddDElement('div', [], 'win10html');
         var mainscreen = AddElement(win10html, 'div', ['mainscreen'], '');
         var lockscreen = AddElement(win10html, 'div', ['lockscreen'], '');
 
         var desktop = AddElement(mainscreen, 'div', ['desktop'], '');
+        desktop.style.backgroundImage = 'url("'+configuration.desktop.wallpapers+'")';
         var taskbar = AddElement(mainscreen, 'div', ['taskbar'], '');
 
         var windows = AddElement(taskbar, 'div', ['windows'], '');
@@ -35,6 +33,21 @@ var Win10Html = {
     }
 }
 
+/*
+configuration = {
+    desktop: {
+        wallpapers: ''
+    }
+}
+*/
+
+
+/**
+ * Node
+ * @param {string} tagname 
+ * @param {string[]} classes 
+ * @param {string} id 
+ */
 function AddDElement(tagname, classes, id) {
     var element = document.createElement(tagname);
     if (classes !== undefined) 
@@ -43,6 +56,13 @@ function AddDElement(tagname, classes, id) {
     document.body.appendChild(element);
     return element;
 }
+/**
+ * Node
+ * @param {Node} parent 
+ * @param {string} tagname 
+ * @param {string[]} classes 
+ * @param {string} id 
+ */
 function AddElement(parent, tagname, classes, id) {
     var element = document.createElement(tagname);
     if (classes !== undefined) 

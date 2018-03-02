@@ -56,10 +56,41 @@
                     </div>
                 </div>
             </div>
+            <div class="startmenu">
+                <div class="all">
+                    <div class="powerbtn">
+                        <div class="img"></div>
+                        <div class="text"></div>
+                    </div>
+                    <div class="settingsbtn">
+                        <div class="img"></div>
+                        <div class="text"></div>
+                    </div>
+                    <div class="accountbtn">
+                        <div class="img"></div>
+                        <div class="text"></div>
+                    </div>
+                    <div class="expandbtn">
+                        <div class="img"></div>
+                        <div class="text"></div>
+                    </div>
+                </div>
+                <div class="left"></div>
+                <div class="main"></div>
+            </div>
         </div>
         <div class="lockscreen">
             
         </div>
     </div>
+
+    <script>
+        document.querySelector('#win10html .mainscreen .taskbar .windows').onclick = function(){
+            document.querySelector('#win10html .mainscreen .startmenu').classList.toggle('opened');
+        };
+        document.querySelector('#win10html .mainscreen .startmenu .left').onclick = function(){
+            document.querySelector('#win10html .mainscreen .startmenu .left').classList.toggle('opened');
+        };
+    </script>
 </body>
 </html>

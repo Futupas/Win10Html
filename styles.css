@@ -299,21 +299,8 @@
 #win10html .mainscreen .startmenu.opened{
     visibility: visible;
     transform: translateY(0px);
-    opacity: 1;
+    opacity: 0.9;
     transition: transform 0.15s ease-in, opacity 0.15s ease-in, visibility 0.15s step-start;
-}
-#win10html .mainscreen .startmenu .left{
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    width: 50px;
-    /* background-color: rgba(0, 0, 255, 0.5); */
-    transition: width 0.05s linear;
-}
-#win10html .mainscreen .startmenu .left.opened{
-    width: 350px;
-    transition: width 0.2s ease-out;
 }
 #win10html .mainscreen .startmenu .all{
     position: absolute;
@@ -330,5 +317,47 @@
     left: 350px;
     right: 0px;
 }
+#win10html .mainscreen .startmenu .left{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 50px;
+    overflow: hidden;
+    background-color: #000;
+    transition: width 0.05s linear, background-color 0.05s linear;
+}
+#win10html .mainscreen .startmenu .left.opened{
+    background-color: #111111;
+    width: 350px;
+    transition: width 0.2s ease-out, background-color 0.2s ease-out;
+}
 
-#win10html .mainscreen .startmenu .main{}
+#win10html .mainscreen .startmenu .left > div{
+    position: absolute;
+    left: 0px;
+    width: 350px;
+    height: 50px;
+}
+#win10html .mainscreen .startmenu .left > div:hover{
+    background-color: #222222;
+}
+#win10html .mainscreen .startmenu .left > div > div.img{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px 18px;
+}
+#win10html .mainscreen .startmenu .left > div > div.text{
+    display: inline-block;
+    width: 300px;
+    height: 50px;
+    float: left;
+    font-size: 20px;
+    line-height: 50px;
+    margin-left: 50px;
+    color: #fff;
+}

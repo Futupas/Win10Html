@@ -59,23 +59,24 @@
             <div class="startmenu">
                 <div class="all">
                 </div>
-                <div class="left"></div>
-                    <div class="powerbtn">
-                        <div class="img"></div>
-                        <div class="text"></div>
+                <div class="left">
+                    <div class="powerbtn" style="bottom: 0px;">
+                        <div class="img" style="background-image: url('./media/startmenu_power.png');"></div>
+                        <div class="text">Power</div>
                     </div>
-                    <div class="settingsbtn">
-                        <div class="img"></div>
-                        <div class="text"></div>
+                    <div class="settingsbtn" style="bottom: 50px;">
+                        <div class="img" style="background-image: url('./media/startmenu_settings.png');"></div>
+                        <div class="text">Settings</div>
                     </div>
-                    <div class="accountbtn">
-                        <div class="img"></div>
-                        <div class="text"></div>
+                    <div class="accountbtn" style="bottom: 100px;">
+                        <div class="img" style="background-image: url('./media/startmenu_account.png');"></div>
+                        <div class="text">Futupas</div>
                     </div>
-                    <div class="expandbtn">
-                        <div class="img"></div>
-                        <div class="text"></div>
+                    <div class="expandbtn" style="top: 10px;">
+                        <div class="img" style="background-image: url('./media/startmenu_menu.png');"></div>
+                        <div class="text">START</div>
                     </div>
+                </div>
                 <div class="main"></div>
             </div>
         </div>
@@ -88,7 +89,7 @@
         document.querySelector('#win10html .mainscreen .taskbar .windows').onclick = function(){
             document.querySelector('#win10html .mainscreen .startmenu').classList.toggle('opened');
         };
-        document.querySelector('#win10html .mainscreen .startmenu .left').onclick = function(){
+        document.querySelector('#win10html .mainscreen .startmenu .left .expandbtn').onclick = function(){
             document.querySelector('#win10html .mainscreen .startmenu .left').classList.toggle('opened');
         };
     </script>

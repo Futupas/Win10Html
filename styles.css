@@ -15,6 +15,7 @@
 }
 #win10html .mainscreen{
     position: absolute;
+    perspective: 1000px;
     overflow: hidden;
     top: 0px;
     left: 0px;
@@ -303,13 +304,16 @@
     min-width: 742px;
     height: 65%;
     background-color: #000;
-    transform: translateY(50px);
+    transform-origin: bottom center;
+    transform: rotateX(90deg);
+    /* transition: transform 5s linear; */
     transition: transform 0.05s linear, opacity 0.05s linear, visibility 0.05s step-end;
 }
 #win10html .mainscreen .startmenu.opened{
     visibility: visible;
-    transform: translateY(0px);
+    transform: rotateX(0deg);
     opacity: 0.9;
+    /* transition: transform 5s ease-out; */
     transition: transform 0.15s ease-out, opacity 0.15s ease-out, visibility 0.15s step-start;
 }
 #win10html .mainscreen .startmenu .all{

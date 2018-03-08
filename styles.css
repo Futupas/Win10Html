@@ -283,7 +283,7 @@
     left: 0px;
     z-index: 3;
     width: 50%;
-    min-width: 800px;
+    min-width: 725px;
     height: 65%;
     background-color: #000;
     transform: translateY(50px);
@@ -293,7 +293,7 @@
     visibility: visible;
     transform: translateY(0px);
     opacity: 0.9;
-    transition: transform 0.15s ease-in, opacity 0.15s ease-in, visibility 0.15s step-start;
+    transition: transform 0.15s ease-out, opacity 0.15s ease-out, visibility 0.15s step-start;
 }
 #win10html .mainscreen .startmenu .all{
     position: absolute;
@@ -306,6 +306,7 @@
     overflow-y: auto;
 }
 #win10html .mainscreen .startmenu .main{
+    perspective: 100px;
     position: absolute;
     top: 0px;
     bottom: 0px;
@@ -359,6 +360,12 @@
 #win10html .mainscreen .startmenu .all > div{
     background-color: #000;
     position: static;
+    margin-top: 20px; margin-bottom: 20px;
+    transition: margin-top 0.05s linear, margin-bottom 0.05s linear;
+}
+#win10html .mainscreen .startmenu.opened .all > div{
+    margin-top: 0px; margin-bottom: 0px;
+    transition: margin-top 0.15s ease-out, margin-bottom 0.15s ease-out;
 }
 #win10html .mainscreen .startmenu .all > div:hover{
     background-color: #222;
@@ -387,4 +394,35 @@
     height: 30px;
     font-size: 15px;
     margin-left: 30px;
+}
+
+#win10html .mainscreen .startmenu.opened .main .prog{
+    margin-top: 10px; margin-bottom: 10px;
+    transition: margin-top 0.15s ease-out, margin-bottom 0.15s ease-out;
+}
+#win10html .mainscreen .startmenu .main .prog{
+    position: static;
+    float: left;
+    margin: 10px;
+    height: 93px;
+    width: 93px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px 30px;
+    background-color: #111111;
+    font-size: 13px;
+    display: flex;
+    align-items: flex-end;
+    padding: 5px;
+    border: 1px solid #fff;
+    color: #fff;
+    transform: rotateY(0deg);
+    margin-top: 30px; margin-bottom: 30px;
+    transition: margin-top 0.05s linear, margin-bottom 0.05s linear;
+}
+#win10html .mainscreen .startmenu .main .prog:hover{
+    height: 91px;
+    width: 91px;
+    border: 2px solid #fff;
+    transform: rotateY(-1deg);
 }

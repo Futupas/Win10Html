@@ -274,6 +274,23 @@
 #win10html .mainscreen .desktop .window .header .rightbuttons .close:hover{
     background-color: #ff8080;
 }
+#win10html .mainscreen .desktop .window .content{
+    position: absolute;
+    top: 25px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+#win10html .mainscreen .desktop .window .content > iframe{
+    position: absolute;
+    border: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+}
 
 #win10html .mainscreen .startmenu{
     visibility: hidden;

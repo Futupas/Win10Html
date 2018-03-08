@@ -59,10 +59,10 @@ var Win10Html = {
                 var content = AddElement(window, 'div', ['content']);
                 var inner = AddElement(content, 'iframe');
                 inner.src = this.win10html_programData.prog;
-                inner.style.position = 'absolute';
-                inner.style.border = '0px';
-                inner.style.top = inner.style.left = inner.style.bottom = inner.style.right = '0px';
-                inner.style.width = inner.style.height = '100%';
+                // inner.style.position = 'absolute';
+                // inner.style.border = '0px';
+                // inner.style.top = inner.style.left = inner.style.bottom = inner.style.right = '0px';
+                // inner.style.width = inner.style.height = '100%';
             }
         }
     }
